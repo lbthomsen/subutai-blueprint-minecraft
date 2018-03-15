@@ -1,6 +1,6 @@
 [
     {
-        "hosts": "wp",
+        "hosts": "mcs",
         "remote_user": "root",
         "tasks": [
             {
