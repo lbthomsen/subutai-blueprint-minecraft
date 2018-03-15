@@ -16,6 +16,11 @@
                     "domain": "${domainName}",
                     "internal-port": "80",
                     "external-port": "80"
+                }, 
+                {
+                    "protocol": "tcp",
+                    "internal-port": "25565",
+                    "external-port": "25565"
                 }
             ]
         }
@@ -33,6 +38,18 @@
             {
                 "key": "domain_name",
                 "value": "${domainName}"
+            }, 
+            {
+                "key": "minecraft_eula",
+                "value": "${minecraftEula}"
+            },
+            {
+                "key": "minecraft_motd",
+                "value": "${minecraftMotd}"
+            }, 
+            {
+                "key": "minecraft_allow_flight",
+                "value": "${minecraftAllowFlight}"
             }
         ],
         "groups": [
@@ -62,6 +79,24 @@
             "type": "enum",
             "default": "TINY",
             "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+        }, 
+        "minecraftEula": {
+            "description": "Accept Minecraft EULA",
+            "type": "enum",
+            "default": "false",
+            "validation": "false,TRUE"
+        }, 
+        "minecraftMotd": {
+            "description": "Minecraft Message of the Day",
+            "type": "string",
+            "default": "A Minecraft Server",
+            "validation": "..*"
+        }, 
+        "minecraftAllowFlight": {
+            "description": "Allow flight",
+            "type": "enum",
+            "default": "false",
+            "validation": "false,true"
         }
     }
 }
