@@ -1,2 +1,1 @@
-# subutai-blueprint-minecraft
-Subutai Blueprint Minecraft Server
+# subutai-blueprint-wp

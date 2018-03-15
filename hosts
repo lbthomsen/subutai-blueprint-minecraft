@@ -1,0 +1,5 @@
+
+wp0 ansible_port=10003 ansible_host=10.139.4.1	
+
+[wp]
+wp0
