@@ -41,3 +41,13 @@
       template: 
         src: files/eula.txt
         dest: /usr/local/minecraft/eula.txt
+
+    - name: Install rc.local
+      template:
+        src: files/rc.local
+        dest: /etc/rc.local
+        mode: 755
+
+    - name: Finally run rc.local
+      command: /etc/rc.local
+      
