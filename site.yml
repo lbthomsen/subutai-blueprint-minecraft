@@ -1,0 +1,43 @@
+---
+
+- hosts: mcs
+  remote_user: root
+  tasks: 
+
+    - name: Upgrade
+      apt:
+        update_cache: yes
+        upgrade: yes
+        allow_unauthenticated: yes
+
+    - name: Install openjdk
+      apt:
+        name: openjdk-9-jre
+        state: present
+
+    - name: Install screen
+      apt:
+        name: screen
+        state: present
+
+    - name: Create /usr/local/minecraft
+      file:
+        path: /usr/local/minecraft
+        returse: yes
+        state: directory
+
+    - name: Download minecraft server
+      get_url:
+        url: https://launcher.mojang.com/mc/game/1.12.2/server/886945bfb2b978778c3a0288fd7fab09d315b25f/server.jar
+        dest: /usr/local/minecraft/server.jar
+
+    - name: Copy server.properties
+      template:
+        src: files/server.properties
+        dest: /usr/local/minecraft/server.properties
+      register: config
+
+    - name: Copy eula.txt
+      template: 
+        src: files/eula.txt
+        dest: /usr/local/minecraft/eula.txt

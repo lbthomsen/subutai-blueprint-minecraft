@@ -1,7 +1,7 @@
 {
     "name": "${environmentName}",
     "description": "Minecraft Server",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "https://github.com/lbthomsen",
     "ssh-key": "lth", 
     "containers": [
@@ -28,7 +28,7 @@
     ],
     "ansible-configuration": {
         "source-url": "https://github.com/lbthomsen/subutai-blueprint-minecraft/archive/master.zip",
-        "ansible-playbook": "all.json",
+        "ansible-playbook": "site.yml",
         "extra-vars": [
             {
                 "key": "domain_name",
