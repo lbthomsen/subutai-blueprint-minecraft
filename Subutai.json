@@ -13,7 +13,7 @@
             "port-mapping": [
                 {
                     "protocol": "tcp",
-                    "domain": "${domainName}",
+                    "domain": "${domain}",
                     "internal-port": "25565",
                     "external-port": "25565"
                 }
@@ -32,7 +32,7 @@
         "extra-vars": [
             {
                 "key": "domain_name",
-                "value": "${domainName}"
+                "value": "${domain}"
             }, 
             {
                 "key": "minecraft_eula",
@@ -71,7 +71,7 @@
             "default": "mc",
             "validation": "[a-zA-Z0-9]+"
         },
-        "domainName": {
+        "domain": {
             "description": "Enter the application domain name",
             "type": "domain",
             "default": "change.the.domain",
