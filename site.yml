@@ -23,7 +23,7 @@
     - name: Create /usr/local/minecraft
       file:
         path: /usr/local/minecraft
-        returse: yes
+        recurse: yes
         state: directory
 
     - name: Download minecraft server
