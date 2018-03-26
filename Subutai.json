@@ -45,6 +45,14 @@
             {
                 "key": "minecraft_allow_flight",
                 "value": "${minecraftAllowFlight}"
+            }, 
+            {
+                "key": "minecraft_allow_nether",
+                "value": "${minecraftAllowNether}"
+            }, 
+            {
+                "key": "minecraft_max_players",
+                "value": "${minecraftMaxPlayers}"
             }
         ],
         "groups": [
@@ -92,6 +100,18 @@
             "type": "enum",
             "default": "false",
             "validation": "false,true"
+        }, 
+        "minecraftAllowNether": {
+            "description": "Allow nether",
+            "type": "enum",
+            "default": "true",
+            "validation": "false,true"
+        }, 
+        "minecraftMaxPlayers": {
+            "description": "Max Players",
+            "type": "string",
+            "default": "20",
+            "validation": "[0-9]+"
         }
     }
 }
