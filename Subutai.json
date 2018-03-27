@@ -3,7 +3,7 @@
     "description": "Minecraft Server",
     "version": "0.0.2",
     "author": "https://github.com/lbthomsen",
-    "ssh-key": "lth", 
+    "ssh-key": "lth",
     "containers": [
         {
             "hostname": "mcs",
@@ -33,7 +33,7 @@
             {
                 "key": "domain_name",
                 "value": "${domain}"
-            }, 
+            },
             {
                 "key": "minecraft_eula",
                 "value": "${minecraftEula}"
@@ -41,15 +41,15 @@
             {
                 "key": "minecraft_motd",
                 "value": "${minecraftMotd}"
-            }, 
+            },
             {
                 "key": "minecraft_allow_flight",
                 "value": "${minecraftAllowFlight}"
-            }, 
+            },
             {
                 "key": "minecraft_allow_nether",
                 "value": "${minecraftAllowNether}"
-            }, 
+            },
             {
                 "key": "minecraft_max_players",
                 "value": "${minecraftMaxPlayers}"
@@ -88,31 +88,31 @@
             "type": "enum",
             "default": "TINY",
             "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
-        }, 
+        },
         "minecraftEula": {
             "description": "Accept Minecraft EULA",
             "type": "enum",
             "default": "false",
             "validation": "false,TRUE"
-        }, 
+        },
         "minecraftMotd": {
             "description": "Minecraft Message of the Day",
             "type": "string",
             "default": "A Minecraft Server",
             "validation": "..*"
-        }, 
+        },
         "minecraftAllowFlight": {
             "description": "Allow flight",
             "type": "enum",
             "default": "false",
             "validation": "false,true"
-        }, 
+        },
         "minecraftAllowNether": {
             "description": "Allow nether",
             "type": "enum",
             "default": "true",
             "validation": "false,true"
-        }, 
+        },
         "minecraftMaxPlayers": {
             "description": "Max Players",
             "type": "string",
