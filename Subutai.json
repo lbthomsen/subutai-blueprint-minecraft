@@ -15,7 +15,7 @@
                     "protocol": "tcp",
                     "domain": "${domain}",
                     "internal-port": "25565",
-                    "external-port": "25565"
+                    "external-port": "${port}"
                 }
             ]
         }
@@ -76,6 +76,12 @@
             "type": "domain",
             "default": "change.the.domain",
             "validation": "[a-zA-Z0-9]+"
+        },
+        "port": {
+            "description": "Enter port number (default is 25565 but that might not be available)",
+            "type": "string",
+            "default": "25565",
+            "validation": "[0-9]+"
         },
         "containerSize": {
             "description": "Container Size",

@@ -14,11 +14,13 @@
       apt:
         name: openjdk-9-jre
         state: present
+        allow_unauthenticated: yes
 
     - name: Install screen
       apt:
         name: screen
         state: present
+        allow_unauthenticated: yes
 
     - name: Create /usr/local/minecraft
       file:
