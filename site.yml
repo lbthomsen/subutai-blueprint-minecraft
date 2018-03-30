@@ -6,7 +6,7 @@
   tasks: 
 
     - name: Update
-      raw: apt -y --allow-unauthenticated update
+      raw: apt-get -y --allow-unauthenticated update || true
 
     - name: Ensure python is available
       raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal
@@ -15,7 +15,7 @@
       raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt
 
     - name: Upgrade
-      raw: apt-get -y --allow-unauthenticated upgrade || true
+      raw: apt-get -y --allow-unauthenticated upgrade
 
 - hosts: mcs
   remote_user: root
