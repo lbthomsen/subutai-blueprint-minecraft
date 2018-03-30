@@ -5,8 +5,11 @@
   remote_user: root
   tasks: 
 
+    - name: Update
+      raw: apt -y --allow-unauthenticated update
+
     - name: Ensure python is available
-      raw: test -e /usr/bin/python || (apt -y update && apt install -y --allow-unauthenticated python-minimal)
+      raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal
 
     - name: Ensure python-apt is available
       raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt
