@@ -6,13 +6,13 @@
   tasks: 
 
     - name: Update
-      raw: apt -y --allow-unauthenticated update || true
+      raw: apt -y --allow-unauthenticated update
 
     - name: Ensure python is available
-      raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal || true
+      raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal
 
     - name: Ensure python-apt is available
-      raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt || true
+      raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt
 
     - name: Upgrade
       raw: apt-get -y --allow-unauthenticated upgrade || true
