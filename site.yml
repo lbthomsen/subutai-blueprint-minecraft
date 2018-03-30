@@ -6,7 +6,7 @@
   tasks: 
 
     - name: Update
-      raw: apt -y --allow-unauthenticated update
+      raw: apt -y --allow-unauthenticated update || true
 
     - name: Ensure python is available
       raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal
