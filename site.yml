@@ -9,13 +9,13 @@
       raw: apt -y --allow-unauthenticated update || true
 
     - name: Ensure python is available
-      raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal
+      raw: test -e /usr/bin/python || apt install -y --allow-unauthenticated python-minimal || true
 
     - name: Ensure python-apt is available
-      raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt
+      raw: test -d /usr/share/python-apt || apt install -y --allow-unauthenticated python-apt || true
 
     - name: Upgrade
-      raw: apt-get -y --allow-unauthenticated upgrade
+      raw: apt-get -y --allow-unauthenticated upgrade || true
 
 - hosts: mcs
   remote_user: root
