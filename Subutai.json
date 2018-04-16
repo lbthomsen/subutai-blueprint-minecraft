@@ -99,7 +99,7 @@
             "description": "Minecraft Message of the Day",
             "type": "string",
             "default": "A Minecraft Server",
-            "validation": "..*"
+            "validation": "[a-zA-Z0-9]+"
         },
         "minecraftAllowFlight": {
             "description": "Allow flight",
