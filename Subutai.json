@@ -1,7 +1,7 @@
 {
     "name": "${environmentName}",
     "description": "Minecraft Server",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "author": "https://github.com/lbthomsen",
     "ssh-key": "lth",
     "containers": [
@@ -99,7 +99,7 @@
             "description": "Minecraft Message of the Day",
             "type": "string",
             "default": "A Minecraft Server",
-            "validation": "..*"
+            "validation": "[^'][^']*"
         },
         "minecraftAllowFlight": {
             "description": "Allow flight",
