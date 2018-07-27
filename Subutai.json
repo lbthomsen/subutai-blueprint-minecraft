@@ -1,7 +1,7 @@
 {
     "name": "${environmentName}",
     "description": "Minecraft Server",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": "https://github.com/lbthomsen",
     "ssh-key": "lth",
     "containers": [
@@ -22,8 +22,7 @@
     ],
     "peer-criteria": [
         {
-            "name": "SRV-GROUP",
-            "max-price": "100"
+            "name": "SRV-GROUP"
         }
     ],
     "ansible-configuration": {
