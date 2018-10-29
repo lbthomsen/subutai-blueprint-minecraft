@@ -21,17 +21,35 @@
   remote_user: root
   tasks: 
 
-    - name: Install openjdk
-      apt:
-        name: openjdk-9-jre
-        state: present
-        allow_unauthenticated: yes
+    - name: Disable dpkg fsync
+      shell: echo force-unsafe-io > /etc/dpkg/dpkg.cfg.d/unsafe-io
+      args: 
+        creates: /etc/dpkg/dpkg.cfg.d/unsafe-io
 
-    - name: Install screen
+    - name: Install dirmngr
       apt:
-        name: screen
+        name: dirmngr
         state: present
-        allow_unauthenticated: yes
+
+    - name: Install apt-transport-https
+      apt:
+        name: apt-transport-https
+        state: present
+
+    - name: Upgrade debian
+      apt:
+        update_cache: true
+        upgrade: true
+
+    - name: Install required debs
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items: 
+        - screen
+        - openjdk-8-jre
+        - aptitude
+        - curl
 
     - name: Create /usr/local/minecraft
       file:
