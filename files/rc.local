@@ -2,4 +2,4 @@
 #
 # Start Minecraft
 #
-screen -dmS minecraft bash -c "cd /usr/local/minecraft && java -jar server.jar"
+screen -dmS minecraft bash -c "sleep 10 ; cd /usr/local/minecraft ; java -jar server.jar"

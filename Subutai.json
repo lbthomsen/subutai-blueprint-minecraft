@@ -1,7 +1,7 @@
 {
     "name": "${environmentName}",
     "description": "Minecraft Server",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "author": "https://github.com/lbthomsen",
     "ssh-key": "lth",
     "containers": [
