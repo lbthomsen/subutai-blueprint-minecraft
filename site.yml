@@ -42,7 +42,7 @@
 
     - name: Download minecraft server
       get_url:
- 	url: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
+        url: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
         dest: /usr/local/minecraft/server.jar
 
     - name: Copy server.properties
@@ -65,3 +65,4 @@
     - name: Finally run rc.local
       command: /etc/rc.local
       
+# vim: ts=2 et nowrap autoindent
